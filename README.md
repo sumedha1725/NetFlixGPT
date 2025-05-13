@@ -1,8 +1,11 @@
 -create app
 -Configured tailwind css
 -header
+-Routing of App
 -login form
 -create signup form
+-Form Validations
+-useRef Hook
 
 
 

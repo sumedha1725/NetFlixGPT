@@ -1,4 +1,4 @@
-import Body from "./components/Body"
+import Body from "./Components/Body"
 import { BrowserRouter } from "react-router-dom";
 
 
