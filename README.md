@@ -6,6 +6,19 @@
 -create signup form
 -Form Validations
 -useRef Hook
+-create redux store with userslice
+-implement signout
+-if the user is not logged in he will not redirect to browse page
+-add hardcoded value to constant file
+-fetch api (tmdb)
+-custom hook for nowplaying movie
+-create movie slice
+-update store with movie data
+-planning for main container and secondary container
+-fetch data for trailer vdo
+-update store with trailer vdo data
+-embeded the Youtube vdo and make it autoplay and mute
+-added tailwind css
 
 
 

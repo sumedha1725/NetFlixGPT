@@ -1,6 +1,10 @@
 import React, { useRef, useState } from 'react'
 import Header from './Header'
 import { checkValidData } from '../Utils/validate';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addUser} from '../Utils/userSlice';
+
 
 const Login = () => {
 
@@ -12,18 +16,32 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const handleButtonClick = () => {
     //validate form data
     console.log(fullname.current.value);
     console.log(email.current.value);
     console.log(password.current.value);
 
-    const message = checkValidData(fullname.current ? fullname.current.value : "", email.current.value , password.current.value, isSignInForm);
+
+    
+    const message = checkValidData(fullname.current ? fullname.current.value : "",  email.current.value , password.current.value, isSignInForm);
     // console.log(message);
     setErrMessage(message);
 
+    if(!message) {
+      dispatch(
+        addUser({
+          name: fullname.current?.value,
+          email: email.current.value,
+        })
+      );
+      navigate("/browse");
+    }
 
-  } 
+  } ;
 
   const signInForm = () => {
     setIsSignInForm(!isSignInForm)
