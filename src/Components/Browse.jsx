@@ -7,11 +7,12 @@ import useNowPlayingMovies from '../Hooks/useNowPlayingMovies';
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
 import usePopularMovies from '../Hooks/usePopularMovies';
+import GptSearch from './GptSearch';
 
 const Browse = () => {
 
-  const user = useSelector((store) => store.user);
-  const navigate = useNavigate();
+  const showGptSearch = useSelector((store)=>store.gpt.showGptSearch)
+
   // useEffect(() => {
   //   if (!user) {
   //     navigate("/login");
@@ -24,8 +25,12 @@ const Browse = () => {
   return (
     <div>
         {<Header isLoggedIn/>}
+        {showGptSearch ? (<GptSearch /> ) : (
+        <>
         <MainContainer />
         <SecondaryContainer />
+        </>)}
+        
     </div>
     );
 

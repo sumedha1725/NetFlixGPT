@@ -19,6 +19,12 @@
 -update store with trailer vdo data
 -embeded the Youtube vdo and make it autoplay and mute
 -added tailwind css
+-Build Secondary Component
+-Build Movie list
+-build Movie Card
+-TMDB Image CDN URL
+-Made Browse page with tailwind css
+-usePopularMovies Custom Hook
 
 
 
