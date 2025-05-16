@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import useNowPlayingMovies from '../Hooks/useNowPlayingMovies';
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
+import usePopularMovies from '../Hooks/usePopularMovies';
 
 const Browse = () => {
 
@@ -18,6 +19,7 @@ const Browse = () => {
   // }, [user, navigate]);
 
   useNowPlayingMovies();
+  usePopularMovies();
 
   return (
     <div>
